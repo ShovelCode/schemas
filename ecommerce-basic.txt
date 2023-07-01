@@ -1,0 +1,24 @@
+Table: Customers
+- customer_id (Primary Key)
+- name
+- email
+- address
+
+Table: Orders
+- order_id (Primary Key)
+- customer_id (Foreign Key)
+- order_date
+- total_amount
+
+Table: Order_Items
+- order_item_id (Primary Key)
+- order_id (Foreign Key)
+- product_id (Foreign Key)
+- quantity
+- unit_price
+
+Table: Products
+- product_id (Primary Key)
+- name
+- description
+- price
