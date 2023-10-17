@@ -1,0 +1,21 @@
+Table: Users
+---------------
+| UserID        | INT          | Primary Key, Auto Increment |
+|---------------|--------------|----------------------------|
+| Username      | VARCHAR(50)  | Not Null, Unique           |
+|---------------|--------------|----------------------------|
+| HashedAndSaltedPassword | VARCHAR(256) | Not Null     |
+|---------------|--------------|----------------------------|
+| RecoveryEmail | VARCHAR(100) | Unique                     |
+|---------------|--------------|----------------------------|
+| PhoneNumber   | VARCHAR(15)  | Unique                     |
+
+
+
+CREATE TABLE Users (
+    UserID INT PRIMARY KEY AUTO_INCREMENT,
+    Username VARCHAR(50) NOT NULL UNIQUE,
+    HashedAndSaltedPassword VARCHAR(256) NOT NULL,
+    RecoveryEmail VARCHAR(100) UNIQUE,
+    PhoneNumber VARCHAR(15) UNIQUE
+);
